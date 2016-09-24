@@ -19,6 +19,12 @@ You need to do after you make the above.
 
 
 # ScreenShots
-![one](https://github.com/iamShekharGH/HeartAttack/blob/master/Screenshots/one.png)
-
+<p align="center">
+  <img src="Screenshots/one.png" width="350"/>
+  <img src="Screenshots/two.png" width="350"/>
+  <img src="Screenshots/three.png" width="350"/>
+  <img src="Screenshots/four.png" width="350"/>
+  <img src="Screenshots/five.png" width="350"/>
+  <img src="Screenshots/six.png" width="350"/>
+</p>
 
