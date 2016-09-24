@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">HeartAttackAndroid</string>
+    <string name="do_you_have_breathing_problems">Do you have breathing problems ?</string>
+    <string name="are_you_diabetic">Can you eat Sweets ?</string>
+    <string name="nope">Nope</string>
+    <string name="hell_yeah">Hell Yeah</string>
+    <string name="sittingdown_femail">SittingDown(Femail)</string>
+    <string name="standingup_men">StandingUp(Men)</string>
+    <string name="how_do_you_pee">How do you pee ?</string>
+    <string name="how_old_are_you">How old are you ?</string>
+    <string name="not_at_all">Not at all</string>
+    <string name="yes_sometimes">Yes sometimes</string>
+    <string name="i_am_ready_tell_me">I am ready. Tell me</string>
+</resources>
