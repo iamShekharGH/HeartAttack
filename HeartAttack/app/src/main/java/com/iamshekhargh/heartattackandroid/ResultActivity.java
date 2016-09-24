@@ -17,12 +17,11 @@ public class ResultActivity extends AppCompatActivity {
     public static final String PREFS_NAME = "MyPrefsFile";
 
     TextView index ;
+    TextView resultDisplay;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //this.requestWindowFeature(Window.FEATURE_NO_TITLE);
-        //this.requestWindowFeature(Window.FEATURE_ACTION_BAR);
         setContentView(R.layout.activity_result);
         overridePendingTransition(R.animator.slide_in_right,R.animator.slide_out_left);
 
@@ -33,6 +32,7 @@ public class ResultActivity extends AppCompatActivity {
 
 
         index = (TextView) findViewById(R.id.textView_index);
+        resultDisplay = (TextView) findViewById(R.id.textView_resultAnswer);
         int indx = settings.getInt("index",0);
         String aa = String.valueOf(indx);
         index.append(aa);
@@ -48,10 +48,10 @@ public class ResultActivity extends AppCompatActivity {
         TextView textView = new TextView(this);
         textView.setTextSize(60);
         textView.setText(peri+"%");
-
+        resultDisplay.setText("Your Chances of a HeartAttach are "+peri+"%");
 
         ViewGroup layout = (ViewGroup) findViewById(R.id.activity_result);
-        layout.addView(textView);
+        //layout.addView(textView);
         if(peri <= 25) {
             layout.setBackgroundColor(Color.rgb(0, 255, 0));
         }else if (peri <= 50){
@@ -64,17 +64,3 @@ public class ResultActivity extends AppCompatActivity {
     }
 
 }
-
-
-
-//    private void setupWindowAnimations() {
-//        Fade fade = new Fade();
-//        Slide slidee = new Slide();
-//        slidee.setDuration(1000);
-//        fade.setDuration(1000);
-//        getWindow().setEnterTransition(slidee);
-//
-//        Slide slide = new Slide();
-//        slide.setDuration(1000);
-//        getWindow().setReturnTransition(slide);
-//    }

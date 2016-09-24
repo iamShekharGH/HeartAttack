@@ -43,7 +43,7 @@
                     android:text="@string/not_at_all"
                     android:id="@+id/radioButton"
                     android:layout_weight="1"
-                    android:checked="true"
+                    android:checked="false"
                     android:onClick="breathingClick"/>
 
                 <RadioButton
@@ -87,7 +87,9 @@
             android:inputType="number"
             android:ems="10"
             android:id="@+id/editText_age"
-            android:text="0" />
+            android:textAlignment="center"
+            android:singleLine="false"
+            tools:text="(Birth_Year) - (Current_Year)" />
     </LinearLayout>
 
     <LinearLayout
@@ -125,7 +127,7 @@
                 android:text="@string/standingup_men"
                 android:id="@+id/radioButton3"
                 android:layout_weight="1"
-                android:checked="true"
+                android:checked="false"
                 android:onClick="genderFn"/>
 
             <RadioButton
@@ -174,7 +176,7 @@
                 android:text="@string/nope"
                 android:id="@+id/radioButton5"
                 android:layout_weight="1"
-                android:checked="true"
+                android:checked="false"
                 android:onClick="diabeticFn"/>
 
             <RadioButton
@@ -202,7 +204,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="So Far Log"
+        android:text="@string/so_far_log"
         android:id="@+id/button_soFarInfo"
         android:layout_above="@+id/button_Submit"
         android:onClick="launchSoFar"

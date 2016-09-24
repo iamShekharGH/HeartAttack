@@ -16,7 +16,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".ResultActivity" />
-        <activity android:name=".ViewSoFar"></activity>
+        <activity android:name=".ViewSoFar" />
+        <activity android:name=".Main2Activity"></activity>
     </application>
 
 </manifest>

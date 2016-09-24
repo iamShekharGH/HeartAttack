@@ -121,8 +121,10 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
                 SharedPreferences.Editor editor = settings.edit();
+
                 Integer ageNumber;
                 String ageText = "0";
+
                 ageText = age.getText().toString();
                 if ("".equals(ageText)) ageNumber =0 ;
                 else ageNumber = Integer.parseInt(ageText);
@@ -161,12 +163,6 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-//    private void setupWindowAnimations() {
-//
-//        Slide slide = new Slide();
-//        slide.setDuration(1000);
-//        getWindow().setExitTransition(slide);
-//    }
     //The log activity. SHows all previous data saved.
     public void launchSoFar(View v){
         Intent intent = new Intent(this,ViewSoFar.class);
@@ -204,6 +200,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void breathingClick(View view){
         boolean checked = ((RadioButton)view).isChecked();
+        Log.d("breatingClick ::", String.valueOf(checked));
         if(view.getId() == R.id.radioButton) breathing = true;
         if(view.getId() == R.id.radioButton2) breathing = false;
 
