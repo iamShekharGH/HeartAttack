@@ -24,7 +24,8 @@ public class ResultActivity extends AppCompatActivity {
         //this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         //this.requestWindowFeature(Window.FEATURE_ACTION_BAR);
         setContentView(R.layout.activity_result);
-        setupWindowAnimations();
+        overridePendingTransition(R.animator.slide_in_right,R.animator.slide_out_left);
+
 
         SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
         SharedPreferences.Editor editor = settings.edit();
@@ -62,15 +63,18 @@ public class ResultActivity extends AppCompatActivity {
         }
     }
 
-    private void setupWindowAnimations() {
-        Fade fade = new Fade();
-        Slide slidee = new Slide();
-        slidee.setDuration(5000);
-        fade.setDuration(5000);
-        getWindow().setEnterTransition(slidee);
-
-        Slide slide = new Slide();
-        slide.setDuration(1000);
-        getWindow().setReturnTransition(slide);
-    }
 }
+
+
+
+//    private void setupWindowAnimations() {
+//        Fade fade = new Fade();
+//        Slide slidee = new Slide();
+//        slidee.setDuration(1000);
+//        fade.setDuration(1000);
+//        getWindow().setEnterTransition(slidee);
+//
+//        Slide slide = new Slide();
+//        slide.setDuration(1000);
+//        getWindow().setReturnTransition(slide);
+//    }

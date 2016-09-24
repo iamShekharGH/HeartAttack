@@ -22,6 +22,7 @@ public class ViewSoFar extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_so_far);
+        overridePendingTransition(R.animator.slide_in_right,R.animator.slide_out_left);
         SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
         ViewGroup relativeLayout = (ViewGroup) findViewById(R.id.mainViewGroup);
         aInformation = new TextView(this);
@@ -63,61 +64,9 @@ public class ViewSoFar extends AppCompatActivity {
 
     }
 
-    public void saveInfo(int index ,boolean prbBreathing , int age , boolean gender , boolean diabetic ){
 
-        Log.d("Age  ::", String.valueOf(age));
-
-        SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
-        SharedPreferences.Editor editor = settings.edit();
-        //editor.putInt("total",a);
-        editor.putBoolean("problemBreathing"+index,prbBreathing);
-        editor.putInt("Age"+index,age);
-        editor.putBoolean("gender"+index,gender);
-        editor.putBoolean("Diabetic"+index,diabetic);
-
-
-        editor.commit();
-
-    }
 }
 
 
 
 
-
-
-
-
-//if (indexNo>=0){
-//            TextView index = new TextView(this);
-//            TextView breathingProblems = new TextView(this);
-//            TextView gender = new TextView(this);
-//            TextView age = new TextView(this);
-//            TextView diabetic = new TextView(this);
-//
-//            int temp = 0;
-//            temp = indexNo;
-//            while(temp>=0){
-//
-//                index.setText(String.valueOf(settings.getInt("index",-1)));
-//                breathingProblems.setText(settings.getBoolean("problemBreathing"+index,false) ? "HaveBreathingProbles" : "NoBreathingProblems");
-//                gender.setText(settings.getBoolean("gender"+index,false) ? "male" : "female");
-//                age.setText(String.valueOf(settings.getInt("Age"+index,-1)));
-//                diabetic.setText(settings.getBoolean("Diabetic"+index,false) ? "Have Diabeties" : "No Diabeties");
-//
-//                //RelativeLayout relativeLayout1 = new RelativeLayout(this);
-//                relativeLayout.addView(index);
-////                relativeLayout.addView(breathingProblems);
-////                relativeLayout.addView(gender);
-////                relativeLayout.addView(age);
-////                relativeLayout.addView(diabetic);
-//
-//                //relativeLayout.addView(relativeLayout1);
-//
-//
-//
-//                temp--;
-//            }
-//
-//
-//        }

@@ -4,14 +4,11 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.transition.Slide;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RadioButton;
-import android.widget.RadioGroup;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -34,14 +31,15 @@ public class MainActivity extends AppCompatActivity {
             this.gender = gender ;
             this.diabetic = diabetic ;
             this.percentage = 0;
-            if(breathingProblem == false) this.percentage += 25;
+            if(!breathingProblem) this.percentage += 25;
             if (age>29) this.percentage +=25;
-            if (gender == true) this.percentage +=25;
-            if (diabetic == true) this.percentage +=25;
+            if (gender) this.percentage +=25;
+            if (diabetic) this.percentage +=25;
             this.toString();
 
         }
 
+        //Testing for the String.
         @Override
         public String toString() {
             String string = "";
@@ -92,8 +90,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        setupWindowAnimations();
 
+        //initialising all elements
         breatingProblemsYes = (RadioButton) findViewById(R.id.radioButton);
         breatingProblemsNo = (RadioButton) findViewById(R.id.radioButton2);
         breathing = false;
@@ -147,6 +145,8 @@ public class MainActivity extends AppCompatActivity {
                 saveInfo(temp,breathing,ageNumber,gender,diabetic);
                 resultActivity(consumer.percentage);
 
+                overridePendingTransition(R.animator.slide_in_right,R.animator.slide_out_left);
+
                 //Toast.makeText(getApplicationContext(),consumer.percentage,Toast.LENGTH_SHORT).show();
 
 
@@ -161,18 +161,19 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void setupWindowAnimations() {
-
-        Slide slide = new Slide();
-        slide.setDuration(1000);
-        getWindow().setExitTransition(slide);
-    }
-
+//    private void setupWindowAnimations() {
+//
+//        Slide slide = new Slide();
+//        slide.setDuration(1000);
+//        getWindow().setExitTransition(slide);
+//    }
+    //The log activity. SHows all previous data saved.
     public void launchSoFar(View v){
         Intent intent = new Intent(this,ViewSoFar.class);
         startActivity(intent);
     }
 
+    //Makes entry to the log.
     public void saveInfo(int index ,boolean prbBreathing , int age , boolean gender , boolean diabetic ){
 
         Log.d("Age  ::", String.valueOf(age));
@@ -190,6 +191,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    //Show result.
     public void resultActivity(Integer percentage){
         Log.d("resultActivity","percentage passed   ::"+percentage);
         Intent intent = new Intent(this,ResultActivity.class);
@@ -197,6 +199,8 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
 
     }
+
+    //Input from radio Buttons.
 
     public void breathingClick(View view){
         boolean checked = ((RadioButton)view).isChecked();
@@ -221,6 +225,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+    //To make sure no two radio buttons are checked at the same time.
     public void radioBtnSingleChoice(RadioButton a , RadioButton b) {
         if(a.isChecked()){
             b.setChecked(false);
@@ -232,9 +237,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    protected void allInformation(String breathingProblems){
 
-    }
 
 
 }
