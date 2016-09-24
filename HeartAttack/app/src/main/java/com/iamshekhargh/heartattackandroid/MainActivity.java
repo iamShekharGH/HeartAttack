@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.transition.Slide;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -91,6 +92,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        setupWindowAnimations();
+
         breatingProblemsYes = (RadioButton) findViewById(R.id.radioButton);
         breatingProblemsNo = (RadioButton) findViewById(R.id.radioButton2);
         breathing = false;
@@ -156,6 +159,18 @@ public class MainActivity extends AppCompatActivity {
 
 
 
+    }
+
+    private void setupWindowAnimations() {
+
+        Slide slide = new Slide();
+        slide.setDuration(1000);
+        getWindow().setExitTransition(slide);
+    }
+
+    public void launchSoFar(View v){
+        Intent intent = new Intent(this,ViewSoFar.class);
+        startActivity(intent);
     }
 
     public void saveInfo(int index ,boolean prbBreathing , int age , boolean gender , boolean diabetic ){

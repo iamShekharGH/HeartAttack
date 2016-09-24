@@ -5,6 +5,8 @@ import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.transition.Fade;
+import android.transition.Slide;
 import android.util.Log;
 import android.view.ViewGroup;
 import android.view.Window;
@@ -22,6 +24,7 @@ public class ResultActivity extends AppCompatActivity {
         //this.requestWindowFeature(Window.FEATURE_NO_TITLE);
         //this.requestWindowFeature(Window.FEATURE_ACTION_BAR);
         setContentView(R.layout.activity_result);
+        setupWindowAnimations();
 
         SharedPreferences settings = getSharedPreferences(PREFS_NAME, 0);
         SharedPreferences.Editor editor = settings.edit();
@@ -57,5 +60,17 @@ public class ResultActivity extends AppCompatActivity {
         }else if (peri <= 100){
             layout.setBackgroundColor(Color.rgb(255, 0, 0));
         }
+    }
+
+    private void setupWindowAnimations() {
+        Fade fade = new Fade();
+        Slide slidee = new Slide();
+        slidee.setDuration(5000);
+        fade.setDuration(5000);
+        getWindow().setEnterTransition(slidee);
+
+        Slide slide = new Slide();
+        slide.setDuration(1000);
+        getWindow().setReturnTransition(slide);
     }
 }
