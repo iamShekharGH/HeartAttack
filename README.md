@@ -18,6 +18,7 @@ You need to do after you make the above.
 - Switch from local to A REST API and also add the api.
 
 
-ScreenShots
+# ScreenShots
+![one](https://github.com/iamShekharGH/HeartAttack/blob/master/Screenshots/one.png)
 
 
