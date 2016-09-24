@@ -1,10 +1,10 @@
 # HeartAttack
 
 It analyses how many of the patients are more likely to have a heart attack if a given set of conditions are true.
-	- Breathing Problems
-	- 30 yrs or older
-	- Is Married to a girl.
-	- Is Diabetic 
+- Breathing Problems
+- 30 yrs or older
+- Is Married to a girl.
+- Is Diabetic 
 	
 If someone has all of the above problems hell 100% have a Hear Attack
 Every point has weightage of 25%.
