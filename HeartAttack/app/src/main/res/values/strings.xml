@@ -11,5 +11,5 @@
     <string name="not_at_all">Not at all</string>
     <string name="yes_sometimes">Yes sometimes</string>
     <string name="i_am_ready_tell_me">I am ready. Tell me</string>
-    <string name="so_far_log">So Far Log</string>
+    <string name="so_far_log">localStorage</string>
 </resources>
