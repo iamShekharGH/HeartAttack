@@ -41,7 +41,9 @@
             <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
             <!-- </intent-filter> -->
         </activity>
-        <activity android:name=".LocalstorageDB"></activity>
+        <activity android:name=".LocalstorageDB" />
+        <activity android:name=".BreathingProblemOne" />
+        <activity android:name=".WhatIsYourAge"></activity>
     </application>
 
 </manifest>
