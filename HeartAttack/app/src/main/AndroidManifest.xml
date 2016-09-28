@@ -43,7 +43,9 @@
         </activity>
         <activity android:name=".LocalstorageDB" />
         <activity android:name=".BreathingProblemOne" />
-        <activity android:name=".WhatIsYourAge"></activity>
+        <activity android:name=".WhatIsYourAge" />
+        <activity android:name=".YouAGuy" />
+        <activity android:name=".DiabeticActivity"></activity>
     </application>
 
 </manifest>

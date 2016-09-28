@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/activity_what_is_your_age"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_diabetic"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.iamshekhargh.heartattackandroid.WhatIsYourAge"
-    android:background="#4298b5">
+    tools:context="com.iamshekhargh.heartattackandroid.DiabeticActivity"
+    android:background="#92b06a">
 
     <LinearLayout
         android:orientation="horizontal"
@@ -18,37 +18,16 @@
         android:layout_height="wrap_content">
 
         <TextView
-            android:text="You look awesome. How old are you ?"
+            android:text="Choose One"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/textView"
+            android:id="@+id/textView3"
             android:layout_weight="1"
-            android:typeface="normal"
             android:textAppearance="@style/TextAppearance.AppCompat.Headline"
             android:textSize="36sp"
-            android:textAlignment="center"
-            android:textStyle="normal|bold"
-            android:textAllCaps="true"
             android:fontFamily="casual"
+            android:textAlignment="center"
             android:textColor="#adc4cc" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="132dp">
-
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="numberSigned"
-            android:ems="10"
-            android:id="@+id/editText2"
-            android:layout_weight="1" />
     </LinearLayout>
 
     <LinearLayout
@@ -63,22 +42,46 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:srcCompat="@drawable/ic_action_name"
-            android:id="@+id/imageButton3"
-            android:layout_weight="1" />
+            android:id="@+id/imageButton8"
+            android:layout_weight="1"
+            android:rotation="180" />
 
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="6"></LinearLayout>
 
         <ImageButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:srcCompat="@drawable/ic_action_name"
-            android:id="@+id/imageButton4"
+            android:id="@+id/imageButton7"
             android:layout_weight="1" />
     </LinearLayout>
 
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
 
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/sweets"
+            android:id="@+id/imageView3"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/stopdb"
+            android:id="@+id/imageView"
+            android:layout_weight="1"
+            android:paddingLeft="4dp"
+            android:layout_marginLeft="10dp" />
+    </LinearLayout>
 </RelativeLayout>
