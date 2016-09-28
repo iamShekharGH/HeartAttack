@@ -11,5 +11,12 @@
     <string name="not_at_all">Not at all</string>
     <string name="yes_sometimes">Yes sometimes</string>
     <string name="i_am_ready_tell_me">I am ready. Tell me</string>
-    <string name="so_far_log">So Far Log</string>
+    <string name="so_far_log">localStorageSharedPref</string>
+    <string name="title_activity_temp_sql_test">TempSqlTest</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="localstoragedb">localStorage DB</string>
 </resources>

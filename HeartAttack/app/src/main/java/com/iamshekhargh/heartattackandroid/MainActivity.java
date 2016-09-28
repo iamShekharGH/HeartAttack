@@ -84,7 +84,8 @@ public class MainActivity extends AppCompatActivity {
 
     //Submit
     Button submitdetails;
-     Consumer consumer;
+    Button localStorageDB;
+    Consumer consumer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -107,6 +108,7 @@ public class MainActivity extends AppCompatActivity {
         diabetic = false;
 
         submitdetails = (Button) findViewById(R.id.button_Submit);
+        localStorageDB = (Button) findViewById(R.id.button_localstorageDB) ;
 
 
 
@@ -145,6 +147,8 @@ public class MainActivity extends AppCompatActivity {
 
 
                 saveInfo(temp,breathing,ageNumber,gender,diabetic);
+                TableStore tempTable = new TableStore(Integer.parseInt(String.valueOf(ageNumber)), breathing , gender , diabetic );
+                tempTable.save();
                 resultActivity(consumer.percentage);
 
                 overridePendingTransition(R.animator.slide_in_right,R.animator.slide_out_left);
@@ -160,6 +164,16 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
+
+
+
+
+    }
+
+    public void launchlocalDB(View v){
+
+        Intent intent = new Intent(this,LocalstorageDB.class);
+        startActivity(intent);
 
     }
 
