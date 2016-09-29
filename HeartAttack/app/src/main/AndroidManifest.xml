@@ -11,7 +11,9 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme.NoActionBar">
+        <!--android:theme="@style/AppTheme"-->
+
         <meta-data
             android:name="DATABASE"
             android:value="patientList.db" />
@@ -26,11 +28,11 @@
             android:value="com.iamshekhargh" />
 
         <activity android:name=".MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
         </activity>
         <activity android:name=".ResultActivity" />
         <activity android:name=".ViewSoFar" />
@@ -42,7 +44,14 @@
             <!-- </intent-filter> -->
         </activity>
         <activity android:name=".LocalstorageDB" />
-        <activity android:name=".BreathingProblemOne" />
+        <activity android:name=".BreathingProblemOne" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
         <activity android:name=".WhatIsYourAge" />
         <activity android:name=".YouAGuy" />
         <activity android:name=".DiabeticActivity"></activity>

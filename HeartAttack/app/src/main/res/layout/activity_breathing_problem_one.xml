@@ -86,9 +86,8 @@
             app:srcCompat="@drawable/ic_action_name"
             android:id="@+id/imageButton2"
             android:layout_weight="1"
-            android:rotationX="180"
-            android:rotationY="180"
-            android:rotation="180" />
+            android:rotation="180"
+            android:backgroundTint="#dd5f32" />
 
         <LinearLayout
             android:orientation="horizontal"
@@ -101,6 +100,7 @@
             android:layout_height="wrap_content"
             app:srcCompat="@drawable/ic_action_name"
             android:id="@+id/imageButton"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:backgroundTint="#dd5f32" />
     </LinearLayout>
 </RelativeLayout>

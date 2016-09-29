@@ -12,7 +12,6 @@
     tools:context="com.iamshekhargh.heartattackandroid.WhatIsYourAge"
     android:background="#4298b5">
 
-
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
@@ -44,17 +43,15 @@
         android:layout_marginBottom="132dp">
 
         <EditText
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:inputType="numberSigned"
             android:ems="10"
             android:id="@+id/editText2"
             android:layout_weight="1"
             android:backgroundTint="#adc4cc"
-            android:backgroundTintMode="screen"
-            android:hint="age..?"
-            tools:targetApi="lollipop"
-            tools:ignore="HardcodedText" />
+            android:hint="Enter here"
+            android:elevation="24dp" />
     </LinearLayout>
 
     <LinearLayout
@@ -70,10 +67,7 @@
             android:layout_height="wrap_content"
             app:srcCompat="@drawable/ic_action_name"
             android:id="@+id/imageButton3"
-            android:layout_weight="1"
-
-            android:backgroundTint="#4298b5"
-            android:rotation="179" />
+            android:layout_weight="1" />
 
         <LinearLayout
             android:orientation="horizontal"
@@ -86,8 +80,7 @@
             android:layout_height="wrap_content"
             app:srcCompat="@drawable/ic_action_name"
             android:id="@+id/imageButton4"
-            android:layout_weight="1"
-            android:backgroundTint="#4298b5" />
+            android:layout_weight="1" />
     </LinearLayout>
 
 

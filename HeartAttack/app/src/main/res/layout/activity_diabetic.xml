@@ -27,7 +27,9 @@
             android:textSize="36sp"
             android:fontFamily="casual"
             android:textAlignment="center"
-            android:textColor="#adc4cc" />
+            android:textColor="#adc4cc"
+            android:textStyle="normal|bold"
+            android:textAllCaps="true" />
     </LinearLayout>
 
     <LinearLayout
@@ -44,7 +46,8 @@
             app:srcCompat="@drawable/ic_action_name"
             android:id="@+id/imageButton8"
             android:layout_weight="1"
-            android:rotation="180" />
+            android:rotation="180"
+            android:backgroundTint="#92b06a" />
 
         <LinearLayout
             android:orientation="horizontal"
@@ -57,7 +60,8 @@
             android:layout_height="wrap_content"
             app:srcCompat="@drawable/ic_action_name"
             android:id="@+id/imageButton7"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:backgroundTint="#92b06a" />
     </LinearLayout>
 
     <LinearLayout
@@ -66,22 +70,30 @@
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true">
+        android:layout_alignParentStart="true"
+        android:padding="0dp"
+        android:layout_margin="0dp">
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             app:srcCompat="@drawable/sweets"
-            android:id="@+id/imageView3"
+            android:id="@+id/imageView_sweets"
             android:layout_weight="1" />
 
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             app:srcCompat="@drawable/stopdb"
-            android:id="@+id/imageView"
+            android:id="@+id/imageView_diabetes"
             android:layout_weight="1"
             android:paddingLeft="4dp"
-            android:layout_marginLeft="10dp" />
+            android:layout_marginLeft="10dp"
+            android:adjustViewBounds="false"
+            android:cropToPadding="false"
+            android:paddingBottom="0dp"
+            android:paddingTop="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginBottom="0dp" />
     </LinearLayout>
 </RelativeLayout>
